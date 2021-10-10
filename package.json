@@ -1,0 +1,35 @@
+{
+  "name": "resturant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass src/sass/main.scss dist/css/style.css -w",
+    "dev": "webpack --mode development --watch",
+    "dev-server": "webpack-dev-server --mode development --open",
+    "start": "npm-run-all --parallel sass dev dev-server",
+    "product": "webpack --mode production",
+    "compress": "node-sass src/sass/main.scss dist/css/style.css --output-style compressed",
+    "build": "npm-run-all compress product"
+  },
+  "author": "AliReza",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.3.0",
+    "css-minimizer-webpack-plugin": "^3.1.1",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.4.2",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}

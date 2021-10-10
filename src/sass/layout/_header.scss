@@ -1,0 +1,57 @@
+.header {
+    grid-column: 1 / -1;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-image: linear-gradient(to right, rgba(#000, .5), rgba(#000, .5)), url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-radius:.3rem ;   
+
+
+    .bookmark {
+        position: relative;
+
+        &__icon-box {
+            width: 5rem;
+            height: 5rem;
+            border-radius :1rem;
+            // background-image: linear-gradient(to right,
+            //         $color-primary,
+            //         $color-primary-light);
+            background-color: rgba(#fff, .3);
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__icon {
+            fill: #fff;
+            width: 90%;
+            height: 90%;
+        }
+
+        &__box {
+            width: 25rem;
+            height: 35rem;
+            border: 1px solid #fff;
+            background-color: #fff;
+            position: absolute;
+            top: 6rem;
+            left: -12rem;
+
+            transition: all .5s;
+        }
+
+        .hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

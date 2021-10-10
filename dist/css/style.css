@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-image: linear-gradient(to right bottom, #d35400, #f39c12); }
+
+.container {
+  border: 1px solid #fff;
+  width: 75vw;
+  margin: 20vh auto;
+  padding: .5rem;
+  border-radius: .3rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr repeat(2, 2fr);
+  grid-gap: 1rem;
+  height: 120vh; }
+
+.btn {
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to right, #e67e22, #f39c12);
+  width: 20rem;
+  height: 5rem;
+  padding: 2.95rem 2rem;
+  border-radius: 10rem;
+  margin-left: -6rem;
+  box-shadow: 0 1rem 8rem rgba(0, 0, 0, 0.4); }
+  .btn, .btn::after, .btn::before {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    text-transform: capitalize;
+    transition: all .3s; }
+  .btn:focus {
+    outline: 0; }
+  .btn-icon {
+    width: 5rem;
+    height: 3rem;
+    display: inline-block;
+    fill: #fff; }
+  .btn:hover {
+    background-image: linear-gradient(to left, #e67e22, #f39c12);
+    transform: translateX(-1rem); }
+
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.form-input {
+  border: 0;
+  outline: 0;
+  padding: 1.9rem;
+  padding-right: 12rem;
+  padding-left: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 10rem; }
+  .form-input:focus {
+    outline: 0; }
+
+.header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: .3rem; }
+  .header .bookmark {
+    position: relative; }
+    .header .bookmark__icon-box {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 1rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .header .bookmark__icon {
+      fill: #fff;
+      width: 90%;
+      height: 90%; }
+    .header .bookmark__box {
+      width: 25rem;
+      height: 35rem;
+      border: 1px solid #fff;
+      background-color: #fff;
+      position: absolute;
+      top: 6rem;
+      left: -12rem;
+      transition: all .5s; }
+    .header .bookmark .hide {
+      opacity: 0;
+      visibility: hidden; }
+
+.main {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  border: 1px solid #fff; }
+
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+  border: 1px solid #fff; }

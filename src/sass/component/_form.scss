@@ -1,0 +1,28 @@
+.form{
+
+    &-group{
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &-input{
+        border: 0;
+        outline: 0;
+        padding: 1.9rem;
+        padding-right: 12rem;
+        padding-left: 1rem;
+        font-family: inherit;
+        font-size: inherit;
+        border-radius: 10rem;
+
+
+        &:focus{
+            outline: 0;
+        }
+    }
+}
+
