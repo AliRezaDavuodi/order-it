@@ -5,16 +5,14 @@
     border: 1px solid #fff;
     background-color: #fff;
 
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 
     
 
     &__pagination{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
 
         display: flex;
         align-items: center;
