@@ -48,7 +48,8 @@ body {
   border-radius: 10rem;
   margin-left: -6rem;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.6);
-  background-image: linear-gradient(to right, #e67e22, #f39c12); }
+  background-image: linear-gradient(to right, #e67e22, #f39c12);
+  z-index: 2; }
   .btn__primary:hover {
     transform: translateX(-1.5rem);
     background-image: linear-gradient(to left, #e67e22, #f39c12); }
@@ -77,6 +78,35 @@ body {
   display: inline-block;
   fill: #fff; }
 
+.card__list {
+  display: flex;
+  flex-direction: column; }
+
+.card__item {
+  padding: 1rem .5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all .2s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .card__item:hover {
+    background-color: rgba(253, 121, 168, 0.2);
+    transform: translateY(-1rem); }
+
+.card__img-box {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center; }
+
+.card__photo {
+  height: 100%;
+  object-fit: cover; }
+
 .form-group {
   position: relative;
   display: flex;
@@ -91,9 +121,14 @@ body {
   padding-left: 1rem;
   font-family: inherit;
   font-size: inherit;
-  border-radius: 10rem; }
+  border-radius: 10rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+  transition: all .3s; }
   .form-input:focus {
-    outline: 0; }
+    outline: 0;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.7);
+    padding-right: 15;
+    transform: translateX(-2rem); }
 
 .header {
   grid-column: 1 / -1;
@@ -110,15 +145,21 @@ body {
       width: 5rem;
       height: 5rem;
       border-radius: 1rem;
-      background-color: rgba(255, 255, 255, 0.3);
+      background-image: linear-gradient(to right bottom, #f39c12, #d35400);
+      box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      transition: all .2s; }
+      .header .bookmark__icon-box:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8); }
     .header .bookmark__icon {
       fill: #fff;
       width: 90%;
-      height: 90%; }
+      height: 90%;
+      transition: all .3s; }
     .header .bookmark__box {
       width: 25rem;
       height: 35rem;
@@ -127,6 +168,7 @@ body {
       position: absolute;
       top: 6rem;
       left: -12rem;
+      overflow: auto;
       transition: all .5s; }
     .header .bookmark .hide {
       opacity: 0;
@@ -142,35 +184,12 @@ body {
   grid-row: 2 / -1;
   border: 1px solid #fff;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-  .sidebar__list {
-    display: flex;
-    flex-direction: column; }
-  .sidebar__item {
-    padding: 1rem .5rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: all .2s;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-    .sidebar__item:hover {
-      background-color: rgba(253, 121, 168, 0.2);
-      transform: translateY(-1rem); }
-  .sidebar__img-box {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #fff;
-    display: flex;
-    align-items: center; }
-  .sidebar__photo {
-    height: 100%;
-    object-fit: cover; }
+  position: relative; }
   .sidebar__pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;

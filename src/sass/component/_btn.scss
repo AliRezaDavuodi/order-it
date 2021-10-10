@@ -21,6 +21,7 @@
         background-image: linear-gradient(to right,
         $color-primary,
         $color-primary-light);
+        z-index: 2;
 
         &:hover {
             transform: translateX(-1.5rem);
