@@ -15,7 +15,8 @@ body {
   min-height: 100vh;
   font-family: sans-serif;
   text-transform: capitalize;
-  background-image: linear-gradient(to right bottom, #d35400, #f39c12); }
+  background-image: linear-gradient(to right bottom, #d35400, #f39c12);
+  background-repeat: no-repeat; }
 
 .container {
   width: 75vw;
@@ -24,8 +25,21 @@ body {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 20rem repeat(2, 2fr);
-  height: 120vh; }
+  grid-template-rows: 20rem repeat(2, 2fr); }
+
+.heading-2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: .5rem;
+  background-image: linear-gradient(to right, #f39c12, #d35400);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: all .2s; }
+  .heading-2:hover {
+    transform: scale(1.5) skew(12deg); }
 
 .heading-4 {
   font-size: 1.6rem; }
@@ -231,6 +245,23 @@ body {
           fill: red; }
       .main__info--icon-active {
         fill: red !important; }
+  .main .ingredient__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 1rem; }
+  .main .ingredient__item {
+    width: 45%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .main .ingredient__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #e67e22; }
+  .main .ingredient__title {
+    margin-left: .5rem; }
 
 .sidebar {
   grid-column: 1 / 2;

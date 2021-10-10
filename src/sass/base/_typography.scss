@@ -1,5 +1,27 @@
 .heading{
 
+    &-2{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: .5rem;
+        background-image: linear-gradient(
+            to right,
+            $color-primary-light,
+            $color-primary-dark
+        );
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip:text;
+
+        transition: all .2s;
+
+        &:hover{
+            transform: scale(1.5) skew(12deg);
+        }
+    }
+
 
     &-4{
         font-size: 1.6rem;
