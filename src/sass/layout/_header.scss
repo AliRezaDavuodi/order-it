@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-around;
 
-    background-image: linear-gradient(to right, rgba(#000, .5), rgba(#000, .5)), url(../img/header.jpg);
+    background-image: linear-gradient(to right, rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/header.jpg);
     background-size: cover;
     background-position: center 40%;
 

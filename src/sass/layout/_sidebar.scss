@@ -2,9 +2,12 @@
     grid-column: 1 / 2;
     grid-row: 2 / -1;
 
-
     border: 1px solid #fff;
     background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 
     &__list {
@@ -49,4 +52,14 @@
     &__info {
     }
 
+    &__pagination{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem 0;        
+
+        &--icon{
+            width: 1rem;
+        }
+    }
 }
