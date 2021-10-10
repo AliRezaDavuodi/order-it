@@ -17,6 +17,7 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     font-family: sans-serif;
+    text-transform: capitalize;
 
     background-image: linear-gradient(to right bottom,
             $color-primary-dark,
@@ -24,7 +25,7 @@ body {
 }
 
 .container {
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
     width: 75vw;
     margin: 15vh auto;
     // background-color: #fff;
