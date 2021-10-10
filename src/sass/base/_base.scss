@@ -26,16 +26,15 @@ body {
 .container {
     border: 1px solid #fff;
     width: 75vw;
-    margin: 20vh auto;
-    padding: .5rem;
+    margin: 15vh auto;
     // background-color: #fff;
     border-radius: .3rem;
     box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: .5);
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr repeat(2, 2fr);
-    grid-gap: 1rem;
+    grid-template-rows: 20rem repeat(2, 2fr);
+    // grid-gap: 1rem;
 
     // test
     height: 120vh;
