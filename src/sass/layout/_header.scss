@@ -1,9 +1,9 @@
 .header {
     grid-column: 1 / -1;
+    position: relative;
 
 
-    display: flex;
-    align-items: center;
+    @include flexbox(center);
     justify-content: space-around;
 
     background-image: linear-gradient(to right, rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/header.jpg);
@@ -13,10 +13,22 @@
     border-radius:.3rem ;   
 
 
+
     .bookmark {
         position: relative;
+        z-index: 5;
+        
+
+        @include respond(phone){
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+        }
 
         &__icon-box {
+            @include flexbox(center);
+            justify-content: center;
+
             width: 5rem;
             height: 5rem;
             border-radius :1rem;
@@ -25,24 +37,20 @@
                 $color-primary-light,
                 $color-primary-dark
                 );
-                box-shadow: 0 2rem 5rem rgba(#000,.5);
+                box-shadow: 0 2rem 5rem rgba($dark, .5);
             cursor: pointer;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
             transition: all .2s;
 
             &:hover{
                 transform: translateY(-.5rem);
-                box-shadow: 0 2rem 5rem rgba(#000,.8);
+                box-shadow: 0 2rem 5rem rgba($dark,.8);
 
             }
         }
 
         &__icon {
-            fill: #fff;
+            fill: $white;
             width: 90%;
             height: 90%;
             transition: all .3s;
@@ -52,14 +60,19 @@
         &__box {
             width: 25rem;
             height: 35rem;
-            border: 1px solid #fff;
-            background-color: #fff;
+            border: 1px solid $white;
+            background-color: $white;
             position: absolute;
             top: 6rem;
             left: -12rem;
             overflow: auto;
 
+            border-radius: 3px;
+        box-shadow: 0 2rem 5rem rgba($dark, .5);
+
             transition: all .5s;
+
+            
         }
 
         .hide {

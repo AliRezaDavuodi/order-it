@@ -1,0 +1,28 @@
+@mixin flexbox($align){
+    display: flex;
+    align-items: $align;
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone  {  // 0 => 600
+        @media only screen and (max-width : 37.5em) {  // 600px -> 600 / 16
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port  { // 600 => 900
+        @media only screen and (max-width : 56.25em) { // 900px -> 900 /16
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land  { // 900 => 1200
+        @media only screen and (max-width : 75em) {  // 1200px -> 1200 / 16
+            @content;
+        }
+    }
+    @if $breakpoint == big-desk  { // 1800 => ++
+        @media only screen and (min-width : 112.5em) { // 1800px -> 1800 / 16
+            @content;
+        }
+    }
+}

@@ -9,14 +9,21 @@
 
 html {
     font-size: 62.5%; // 10px === 1rem
+
+    @include respond(tab-land){
+        font-size: 46.87%; // 7.5px
+    }
+
+    @include respond(tab-port ){
+        font-size: 40.62%; // 6.5px
+    }
 }
 
 body {
     box-sizing: border-box;
     font-size: 1.8rem;
     line-height: 1.6;
-    min-height: 100vh;
-    font-family: sans-serif;
+    font-family: 'Noto Sans Display', sans-serif;
     text-transform: capitalize;
 
     background-image: linear-gradient(to right bottom,
@@ -26,17 +33,20 @@ body {
 }
 
 .container {
-    // border: 1px solid #fff;
     width: 75vw;
     margin: 15vh auto;
-    // background-color: #fff;
     border-radius: .3rem;
-    box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: .5);
+    box-shadow: 0 2rem 5rem rgba($dark, .5);
+    position: relative;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 20rem repeat(2, 2fr);
-    // grid-gap: 1rem;
+
+    @include respond(tab-port) {
+        grid-template-rows: 25rem max-content 1fr;
+
+    }
 
 
 }

@@ -1,32 +1,34 @@
 .form {
 
     &-group {
-        position: relative;
-
-        display: flex;
-        align-items: center;
+        @include flexbox(center);
         justify-content: center;
+
+        position: relative;
 
     }
 
     &-input {
         border: 0;
-        outline: 0;
         padding: 1.45rem;
         padding-right: 12rem;
         padding-left: 1rem;
         font-family: inherit;
         font-size: inherit;
         border-radius: 10rem;
-        box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: .3);
+        box-shadow: 0 2rem 4rem rgba($dark, .3);
 
         transition: all .3s;
 
+        @include respond(phone) {
+            padding-right: 5rem;
+        }
+
         &:focus {
             outline: 0;
-            box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: .7);
+            box-shadow: 0 2rem 4rem rgba($dark, .7);
             padding-right: 15;
-            transform: translateX(-2rem);
+            transform: translateX(-1.5rem);
         }
     }
 }

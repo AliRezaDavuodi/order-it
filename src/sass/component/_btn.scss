@@ -3,21 +3,23 @@
     &,
     &::after,
     &::before {
-        text-decoration: none;
-        color: #fff;
-        display: flex;
-        text-transform: capitalize;
+
+        @include flexbox(center);
         justify-content: space-around;
-        align-items: center;
+
+        text-decoration: none;
+        color: $white;
+        text-transform: capitalize;
         transition: all .2s;
+        border: none;
     }
 
     &__primary {
         width: 20rem;
-        height: 5rem;
+        padding: 1.19rem 0;
         border-radius: 10rem;
         margin-left: -6rem;
-        box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha:.6);
+        box-shadow: 0 2rem 4rem rgba($dark , .6);
         background-image: linear-gradient(to right,
         $color-primary,
         $color-primary-light);
@@ -33,16 +35,19 @@
         &:active {
             transform: translateX(-1rem);
         }
+        @include respond(phone) {
+            width: 15rem;
+        }
     }
 
 
     &__secondary{
-        color: #000;
+        color: $dark;
         font-size: 1.2rem;
         width: 8rem;
         height: 3rem;
         border-radius: 5rem;
-        box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha:.6);
+        box-shadow: 0 2rem 4rem rgba($dark, .6);
         background-color: rgba($color-primary, .5);
         transition: all .3s;
 
@@ -53,16 +58,11 @@
 
     }
 
-
-    &:focus {
-        outline: 0;
-    }
-
     &-icon {
         width: 5rem;
         height: 3rem;
         display: inline-block;
-        fill: #fff;
+        fill: $white;
     }
 
 }

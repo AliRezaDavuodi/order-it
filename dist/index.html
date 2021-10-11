@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="shortcut icon" href="img/cutlery.png" type="image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
@@ -17,26 +22,26 @@
     <div class="container">
 
         <header class="header">
-            
+
             <div class="form-group">
                 <input type="text" class="form-input" id="form-input" placeholder="Search Meals">
                 <a href="#" class="btn btn__primary">
-                    <svg class="btn-icon"> 
+                    <svg class="btn-icon">
                         <use xlink:href="./img/splite.svg#icon-search"></use>
                     </svg>
                     <span>search</span>
-                </a> 
+                </a>
             </div>
 
             <div class="bookmark">
                 <div class="bookmark__icon-box">
-                    <svg class="bookmark__icon"> 
+                    <svg class="bookmark__icon">
                         <use xlink:href="./img/splite.svg#icon-heart-outlined"></use>
                     </svg>
                 </div>
-                <div class="bookmark__box hide">
+                <div class="bookmark__box hide ">
 
-                    <ul class="card__list">
+                    <ul class="card__list card__list--bookmark ">
 
                         <li class="card__item">
                             <div class="card__img-box">
@@ -47,16 +52,6 @@
                                 <p class="paragraph">Lorem ipsum dolor sit amet.</p>
                             </div>
                         </li>
-                        <li class="card__item">
-                            <div class="card__img-box">
-                                <img class="card__photo" src="./img/header.jpg" alt="">
-                            </div>
-                            <div class="card__info">
-                                <h4 class="heading heading-4">name</h4>
-                                <p class="paragraph">Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </li>
-
                         <li class="card__item">
                             <div class="card__img-box">
                                 <img class="card__photo" src="./img/header.jpg" alt="">
@@ -96,7 +91,17 @@
                                 <p class="paragraph">Lorem ipsum dolor sit amet.</p>
                             </div>
                         </li>
-        
+
+                        <li class="card__item">
+                            <div class="card__img-box">
+                                <img class="card__photo" src="./img/header.jpg" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h4 class="heading heading-4">name</h4>
+                                <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+
                     </ul>
 
 
@@ -161,23 +166,13 @@
                     </div>
                 </li>
 
-                <li class="card__item">
-                    <div class="card__img-box">
-                        <img class="card__photo" src="./img/header.jpg" alt="">
-                    </div>
-                    <div class="card__info">
-                        <h4 class="heading heading-4">name</h4>
-                        <p class="paragraph">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </li>
-
 
             </ul>
 
             <div class="sidebar__pagination">
 
                 <a href="" class="btn btn__secondary">
-                    <svg class="sidebar__pagination--icon"> 
+                    <svg class="sidebar__pagination--icon">
                         <use xlink:href="./img/splite.svg#icon-arrow-left"></use>
                     </svg>
                     <span>page 1</span>
@@ -185,7 +180,7 @@
 
                 <a href="" class="btn btn__secondary">
                     <span>page 3</span>
-                    <svg class="sidebar__pagination--icon"> 
+                    <svg class="sidebar__pagination--icon">
                         <use xlink:href="./img/splite.svg#icon-arrow-right"></use>
                     </svg>
                 </a>
@@ -198,9 +193,9 @@
         <main class="main">
 
             <section class="main__header">
-               <div class="main__photo-box">
-                <img class="main__photo" src="./img/header.jpg" alt="">
-               </div>
+                <div class="main__photo-box">
+                    <img class="main__photo" src="./img/header.jpg" alt="">
+                </div>
                 <h3 class="main__title">
                     <span class="main__title--text">
                         Lorem, ipsum..
@@ -221,7 +216,7 @@
                             <use xlink:href="./img/splite.svg#icon-man"></use>
                         </svg>
                         <span class="main__info--title ">
-                             serving
+                            serving
                         </span>
                         <svg class="main__info--icon main__info--icon-small">
                             <use xlink:href="./img/splite.svg#icon-circle-with-minus"></use>
@@ -249,8 +244,8 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
-                      
+                        </span>
+
                     </li>
 
                     <li class="ingredient__item">
@@ -259,7 +254,7 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
+                        </span>
                     </li>
 
                     <li class="ingredient__item">
@@ -268,7 +263,7 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
+                        </span>
                     </li>
 
                     <li class="ingredient__item">
@@ -277,7 +272,7 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
+                        </span>
                     </li>
 
                     <li class="ingredient__item">
@@ -286,17 +281,7 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
-                    </li>
-
-
-                    <li class="ingredient__item">
-                        <svg class="ingredient__icon">
-                            <use xlink:href="./img/splite.svg#icon-arrow-right"></use>
-                        </svg>
-                        <span class="ingredient__title">
-                            serving
-                       </span>
+                        </span>
                     </li>
 
 
@@ -306,7 +291,7 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
+                        </span>
                     </li>
 
 
@@ -316,7 +301,7 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
+                        </span>
                     </li>
 
 
@@ -326,7 +311,7 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
+                        </span>
                     </li>
 
 
@@ -336,7 +321,17 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
+                        </span>
+                    </li>
+
+
+                    <li class="ingredient__item">
+                        <svg class="ingredient__icon">
+                            <use xlink:href="./img/splite.svg#icon-arrow-right"></use>
+                        </svg>
+                        <span class="ingredient__title">
+                            serving
+                        </span>
                     </li>
 
                     <li class="ingredient__item">
@@ -345,7 +340,7 @@
                         </svg>
                         <span class="ingredient__title">
                             serving
-                       </span>
+                        </span>
                     </li>
 
 
